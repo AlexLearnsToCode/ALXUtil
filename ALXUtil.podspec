@@ -29,6 +29,7 @@ TODO: Add long description of the pod here.
   s.social_media_url = 'https://www.jianshu.com/u/fb6f45f5a7f6'
 
   s.ios.deployment_target = '8.0'
+  s.platform = :ios, '8.0'
 
   s.source_files = 'ALXUtil/Classes/**/*'
   
