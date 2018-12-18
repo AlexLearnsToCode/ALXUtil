@@ -1,0 +1,22 @@
+{
+  "name": "ALXUtil",
+  "version": "0.1.0",
+  "summary": "A short description of ALXUtil.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/alexlearnstocode/ALXUtil",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "alexlearnstocode": "229570121@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/alexlearnstocode/ALXUtil.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ALXUtil/Classes/**/*"
+}

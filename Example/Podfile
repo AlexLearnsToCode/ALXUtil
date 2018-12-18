@@ -1,0 +1,6 @@
+use_frameworks!
+target 'ALXUtil_Tests' do
+  pod 'ALXUtil', :path => '../'
+  
+  
+end

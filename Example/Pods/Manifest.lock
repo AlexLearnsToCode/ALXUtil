@@ -1,0 +1,16 @@
+PODS:
+  - ALXUtil (0.1.0)
+
+DEPENDENCIES:
+  - ALXUtil (from `../`)
+
+EXTERNAL SOURCES:
+  ALXUtil:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ALXUtil: 7eee2b2cb24994f0697709c14fbbdfbeaaec9fbc
+
+PODFILE CHECKSUM: a1e97e9c6159715d70cf72035ba2468344fb40ca
+
+COCOAPODS: 1.5.3
