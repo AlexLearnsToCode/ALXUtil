@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ALXUtil'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A common utility set easy to use.'
 
 # This description is used to generate tags and improve search results.
@@ -32,6 +32,10 @@ TODO: Add long description of the pod here.
   s.platform = :ios, '8.0'
 
   s.source_files = 'ALXUtil/Classes/**/*'
+  s.subspec 'ALXUtil-UIView' do |ss|
+      ss.source_files = 'ALXUtil/Classes/UIView/**/*'
+      ss.public_header_files = 'ALXUtil/Classes/UIView/**/*.h'
+  end
   
   # s.resource_bundles = {
   #   'ALXUtil' => ['ALXUtil/Assets/*.png']

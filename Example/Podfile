@@ -1,6 +1,6 @@
 use_frameworks!
 target 'ALXUtil_Tests' do
   pod 'ALXUtil', :path => '../'
-  
-  
+#  pod 'ALXUtil/ALXUtil-UIView', :path => '../'
+
 end
