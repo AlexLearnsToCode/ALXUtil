@@ -14,6 +14,8 @@
 #import "NSAttributedString+ALXUtil.h"
 #import "UIImage+ALXUtil.h"
 #import "UIView+ALXUtil.h"
+#import "UIImage+ALXUtil.h"
+#import "UIView+ALXUtil.h"
 
 FOUNDATION_EXPORT double ALXUtilVersionNumber;
 FOUNDATION_EXPORT const unsigned char ALXUtilVersionString[];

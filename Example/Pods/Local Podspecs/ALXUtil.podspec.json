@@ -1,6 +1,6 @@
 {
   "name": "ALXUtil",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "A common utility set easy to use.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/alexlearnstocode/ALXUtil",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/alexlearnstocode/ALXUtil.git",
-    "tag": "0.1.3"
+    "tag": "0.1.4"
   },
   "social_media_url": "https://www.jianshu.com/u/fb6f45f5a7f6",
   "platforms": {
@@ -22,18 +22,19 @@
   "source_files": "ALXUtil/Classes/**/*",
   "frameworks": [
     "UIKit",
-    "Foundation"
+    "Foundation",
+    "CoreGraphics"
   ],
   "subspecs": [
     {
       "name": "ALXUtil-UIView",
-      "source_files": "ALXUtil/Classes/UIView/**/*",
-      "public_header_files": "ALXUtil/Classes/UIView/**/*.h"
+      "source_files": "ALXUtil/Classes/UIView+ALXUtil.{h,m}",
+      "public_header_files": "ALXUtil/Classes/UIView+ALXUtil.h"
     },
     {
       "name": "ALXUtil-UIImage",
-      "source_files": "ALXUtil/Classes/UIImage/**/*",
-      "public_header_files": "ALXUtil/Classes/UIImage/**/*.h"
+      "source_files": "ALXUtil/Classes/UIImage+ALXUtil.{h,m}",
+      "public_header_files": "ALXUtil/Classes/UIImage+ALXUtil.h"
     }
   ]
 }
