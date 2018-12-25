@@ -33,12 +33,12 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'ALXUtil/Classes/**/*'
   s.subspec 'ALXUtil-UIView' do |ss|
-      ss.source_files = 'ALXUtil/Classes/UIView/**/*'
-      ss.public_header_files = 'ALXUtil/Classes/UIView/**/*.h'
+      ss.source_files = 'ALXUtil/Classes/UIView+ALXUtil.m'
+      ss.public_header_files = 'ALXUtil/Classes/UIView+ALXUtil.h'
   end
   s.subspec 'ALXUtil-UIImage' do |ss|
-      ss.source_files = 'ALXUtil/Classes/UIImage/**/*'
-      ss.public_header_files = 'ALXUtil/Classes/UIImage/**/*.h'
+      ss.source_files = 'ALXUtil/Classes/UIView+ALXUtil.m'
+      ss.public_header_files = 'ALXUtil/Classes/UIView+ALXUtil.h'
   end
   
   # s.resource_bundles = {
@@ -46,6 +46,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'Foundation'
+  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

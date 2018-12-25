@@ -1,7 +1,9 @@
 PODS:
-  - ALXUtil (0.1.2):
-    - ALXUtil/ALXUtil-UIView (= 0.1.2)
-  - ALXUtil/ALXUtil-UIView (0.1.2)
+  - ALXUtil (0.1.3):
+    - ALXUtil/ALXUtil-UIImage (= 0.1.3)
+    - ALXUtil/ALXUtil-UIView (= 0.1.3)
+  - ALXUtil/ALXUtil-UIImage (0.1.3)
+  - ALXUtil/ALXUtil-UIView (0.1.3)
 
 DEPENDENCIES:
   - ALXUtil (from `../`)
@@ -11,7 +13,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ALXUtil: e25c02ba747c46c19637d307ae4032c8f8348156
+  ALXUtil: 0d9568cec38a211834644ab18f73bbb88b6446da
 
 PODFILE CHECKSUM: eed14df5a457b5a2a44783f32d09f5df1e8a5de3
 
