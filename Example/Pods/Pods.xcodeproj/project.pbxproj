@@ -17,8 +17,8 @@
 		811334123317C26947E11BA332DEEA41 /* Pods-ALXUtil_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E67C1A48995ADBFD57952CDFD5CD8D1B /* Pods-ALXUtil_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0815978A421DE1DC5BB0F29E455507 /* NSAttributedString+ALXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8402C38A3529F1DEBE967A2DAB28D /* NSAttributedString+ALXUtil.m */; };
 		9C5482931B91B32C744A380E8E4C4D92 /* ALXUtil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 052466BF9D41B33B0CD87D35F1D0450B /* ALXUtil-dummy.m */; };
-		AC2BF5FDE77A28AE85576D6F8E72869D /* UIImage+ALXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D650E89933965714FBA32EF4C3955 /* UIImage+ALXUtil.m */; };
-		AFF7473B2E72E6868FA010AB97ABA5C0 /* UIImage+ALXUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 76424F4D91FFCA77434DF927128F869C /* UIImage+ALXUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C60CC5EF21D1DCAE00E32EDE /* UIImage+ALXUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C60CC5ED21D1DCAE00E32EDE /* UIImage+ALXUtil.h */; };
+		C60CC5F021D1DCAE00E32EDE /* UIImage+ALXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CC5EE21D1DCAE00E32EDE /* UIImage+ALXUtil.m */; };
 		D4F0D4099BB59E8ACA2D11634750CD37 /* ALXUtil-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C26C6F8CD200098803BAB75FC7779637 /* ALXUtil-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC8854ED07A2D4D733BB4E41B5BC04D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF330A72DC40E450388407F7DFB2F7 /* UIKit.framework */; };
 		F8112D38647E7A52C9208122F909FC35 /* ALXUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = B145C9E8EBEB2B71C95C903C4B5ADFFB /* ALXUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,10 +43,8 @@
 		1CD8402C38A3529F1DEBE967A2DAB28D /* NSAttributedString+ALXUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+ALXUtil.m"; path = "ALXUtil/Classes/NSAttributedString+ALXUtil.m"; sourceTree = "<group>"; };
 		24BECB4612E485AEBBDF07E99D0FEBF0 /* Pods-ALXUtil_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ALXUtil_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2E3C89A97FBD40685C5D634B600FD567 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		340D650E89933965714FBA32EF4C3955 /* UIImage+ALXUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ALXUtil.m"; sourceTree = "<group>"; };
 		6DB54E1E2DB978F4CB0A21537973B6CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		73F14BB3C869730E51A28AB133D6017D /* Pods-ALXUtil_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALXUtil_Tests-resources.sh"; sourceTree = "<group>"; };
-		76424F4D91FFCA77434DF927128F869C /* UIImage+ALXUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+ALXUtil.h"; sourceTree = "<group>"; };
 		7C2FFBBB1A1E534E0EBAADB5E8A7C09C /* Pods-ALXUtil_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ALXUtil_Tests-dummy.m"; sourceTree = "<group>"; };
 		888156FA7EF8DE87950E8D5F409FB575 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8D07547B88A684EEE41D85FA5AA2A02E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +57,8 @@
 		B908B6A4D05AAFFE75196C751B7B48EA /* Pods-ALXUtil_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ALXUtil_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD88DCD5873E78C5D6177D17DD10EFFE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		C26C6F8CD200098803BAB75FC7779637 /* ALXUtil-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALXUtil-umbrella.h"; sourceTree = "<group>"; };
+		C60CC5ED21D1DCAE00E32EDE /* UIImage+ALXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ALXUtil.h"; path = "ALXUtil/Classes/UIImage+ALXUtil.h"; sourceTree = "<group>"; };
+		C60CC5EE21D1DCAE00E32EDE /* UIImage+ALXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ALXUtil.m"; path = "ALXUtil/Classes/UIImage+ALXUtil.m"; sourceTree = "<group>"; };
 		C73703739C58D2549F444D7A3BC1EF85 /* Pods-ALXUtil_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ALXUtil_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C904922E60B43576A5B5E7BEE3B4F8A6 /* Pods-ALXUtil_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALXUtil_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		D4216C11A6ACA1A7D75B22E640C4B128 /* ALXUtil.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = ALXUtil.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -177,8 +177,6 @@
 		DFC7C75B6BC6B8BB74934E2F0C31B170 /* ALXUtil-UIImage */ = {
 			isa = PBXGroup;
 			children = (
-				76424F4D91FFCA77434DF927128F869C /* UIImage+ALXUtil.h */,
-				340D650E89933965714FBA32EF4C3955 /* UIImage+ALXUtil.m */,
 			);
 			name = "ALXUtil-UIImage";
 			sourceTree = "<group>";
@@ -211,6 +209,8 @@
 				B145C9E8EBEB2B71C95C903C4B5ADFFB /* ALXUtil.h */,
 				FA6C478B51F17D5BD8BDD36B45669E60 /* NSAttributedString+ALXUtil.h */,
 				1CD8402C38A3529F1DEBE967A2DAB28D /* NSAttributedString+ALXUtil.m */,
+				C60CC5ED21D1DCAE00E32EDE /* UIImage+ALXUtil.h */,
+				C60CC5EE21D1DCAE00E32EDE /* UIImage+ALXUtil.m */,
 				DFC7C75B6BC6B8BB74934E2F0C31B170 /* ALXUtil-UIImage */,
 				78622ED7C7D9B8034BD5BC73D83897B4 /* ALXUtil-UIView */,
 				2D910E397FFC5F7D00C9A88EE0F85810 /* Pod */,
@@ -235,10 +235,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60CC5EF21D1DCAE00E32EDE /* UIImage+ALXUtil.h in Headers */,
 				D4F0D4099BB59E8ACA2D11634750CD37 /* ALXUtil-umbrella.h in Headers */,
 				F8112D38647E7A52C9208122F909FC35 /* ALXUtil.h in Headers */,
 				4B502F2279D2C30E273524ACE36D48AF /* NSAttributedString+ALXUtil.h in Headers */,
-				AFF7473B2E72E6868FA010AB97ABA5C0 /* UIImage+ALXUtil.h in Headers */,
 				2EBDFC91515CF2890CD3F1BBD432FEB1 /* UIView+ALXUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,8 +315,8 @@
 			files = (
 				9C5482931B91B32C744A380E8E4C4D92 /* ALXUtil-dummy.m in Sources */,
 				9C0815978A421DE1DC5BB0F29E455507 /* NSAttributedString+ALXUtil.m in Sources */,
-				AC2BF5FDE77A28AE85576D6F8E72869D /* UIImage+ALXUtil.m in Sources */,
 				5947E570B48C73C1220C54B5B91CE6F4 /* UIView+ALXUtil.m in Sources */,
+				C60CC5F021D1DCAE00E32EDE /* UIImage+ALXUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
