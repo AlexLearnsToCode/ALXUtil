@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
   s.platform = :ios, '8.0'
 
-  s.source_files = 'ALXUtil/**/*'
+  s.source_files = 'ALXUtil/ALXUtil.h'
   s.subspec 'ALXUtil-UIView' do |ss|
       ss.source_files = 'ALXUtil/UIView+ALXUtil.{h,m}'
       ss.public_header_files = 'ALXUtil/UIView+ALXUtil.h'
