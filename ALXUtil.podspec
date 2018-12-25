@@ -33,12 +33,16 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'ALXUtil/Classes/**/*'
   s.subspec 'ALXUtil-UIView' do |ss|
-      ss.source_files = 'UIView+ALXUtil.{h,m}'
-      ss.public_header_files = 'UIView+ALXUtil.h'
+      ss.source_files = 'ALXUtil/UIView+ALXUtil.{h,m}'
+      ss.public_header_files = 'ALXUtil/UIView+ALXUtil.h'
   end
   s.subspec 'ALXUtil-UIImage' do |ss|
-      ss.source_files = 'ALXUtil/Classes/UIImage+ALXUtil.{h,m}'
-      ss.public_header_files = 'ALXUtil/Classes/UIImage+ALXUtil.h'
+      ss.source_files = 'ALXUtil/UIImage+ALXUtil.{h,m}'
+      ss.public_header_files = 'ALXUtil/UIImage+ALXUtil.h'
+  end
+  s.subspec 'ALXUtil-NSAttributedString' do |ss|
+      ss.source_files = 'ALXUtil/NSAttributedString+ALXUtil.{h,m}'
+      ss.public_header_files = 'ALXUtil/NSAttributedString+ALXUtil.h'
   end
   
   # s.resource_bundles = {
