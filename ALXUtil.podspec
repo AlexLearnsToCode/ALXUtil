@@ -37,8 +37,8 @@ TODO: Add long description of the pod here.
       ss.public_header_files = 'ALXUtil/UIView+ALXUtil.h'
   end
   s.subspec 'ALXUtil-UIImage' do |ss|
-      ss.source_files = 'ALXUtil/UIImage+ALXUtil.{h,m}'
-      ss.public_header_files = 'ALXUtil/UIImage+ALXUtil.h'
+      ss.source_files = 'ALXUtil/UIImage/UIImage+ALXUtil.{h,m}'
+      ss.public_header_files = 'ALXUtil/UIImage/UIImage+ALXUtil.h'
   end
   s.subspec 'ALXUtil-NSAttributedString' do |ss|
       ss.source_files = 'ALXUtil/NSAttributedString+ALXUtil.{h,m}'
