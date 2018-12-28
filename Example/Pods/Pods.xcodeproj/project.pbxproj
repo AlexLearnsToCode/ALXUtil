@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		086A18D1C8D4D7DF4147E71B2C8551CD /* Pods-ALXUtil_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FFBBB1A1E534E0EBAADB5E8A7C09C /* Pods-ALXUtil_Tests-dummy.m */; };
 		151FC6B5B6E9DF03A3643CC6ECE07B54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888156FA7EF8DE87950E8D5F409FB575 /* Foundation.framework */; };
+		19D2EF8F21D667DA00947192 /* NSCalendar+ALXUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D2EF8D21D667DA00947192 /* NSCalendar+ALXUtil.h */; };
+		19D2EF9021D667DA00947192 /* NSCalendar+ALXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D2EF8E21D667DA00947192 /* NSCalendar+ALXUtil.m */; };
 		2C97009CE0AD372A53C88AFDC40359DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888156FA7EF8DE87950E8D5F409FB575 /* Foundation.framework */; };
 		67102B596FF905B5A8A9405C2EF1F6AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD88DCD5873E78C5D6177D17DD10EFFE /* CoreGraphics.framework */; };
 		811334123317C26947E11BA332DEEA41 /* Pods-ALXUtil_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E67C1A48995ADBFD57952CDFD5CD8D1B /* Pods-ALXUtil_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +48,8 @@
 		052466BF9D41B33B0CD87D35F1D0450B /* ALXUtil-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ALXUtil-dummy.m"; sourceTree = "<group>"; };
 		0C4E3E89FD65A61DCA74E802589FAAB7 /* Pods_ALXUtil_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALXUtil_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		136532F9CB92D5449BD9771CDE09CF53 /* ALXUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALXUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D2EF8D21D667DA00947192 /* NSCalendar+ALXUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+ALXUtil.h"; path = "ALXUtil/NSCalendar/NSCalendar+ALXUtil.h"; sourceTree = "<group>"; };
+		19D2EF8E21D667DA00947192 /* NSCalendar+ALXUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+ALXUtil.m"; path = "ALXUtil/NSCalendar/NSCalendar+ALXUtil.m"; sourceTree = "<group>"; };
 		1ACF330A72DC40E450388407F7DFB2F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		24BECB4612E485AEBBDF07E99D0FEBF0 /* Pods-ALXUtil_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ALXUtil_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2E3C89A97FBD40685C5D634B600FD567 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				C60CC5F721D1E1C500E32EDE /* ALXUtil.h */,
+				19D2EF8D21D667DA00947192 /* NSCalendar+ALXUtil.h */,
+				19D2EF8E21D667DA00947192 /* NSCalendar+ALXUtil.m */,
 				C60CC61B21D62BA400E32EDE /* NSDate+ALXUtil.h */,
 				C60CC61C21D62BA400E32EDE /* NSDate+ALXUtil.m */,
 				C60CC60B21D6101300E32EDE /* NSAttributedString+ALXUtil.h */,
@@ -246,6 +252,7 @@
 				C60CC61D21D62BA400E32EDE /* NSDate+ALXUtil.h in Headers */,
 				C60CC61521D6122900E32EDE /* NSString+ALXUtil.h in Headers */,
 				C60CC60521D60AAF00E32EDE /* UIImage+ALXUtil.h in Headers */,
+				19D2EF8F21D667DA00947192 /* NSCalendar+ALXUtil.h in Headers */,
 				C60CC60A21D6100B00E32EDE /* UIView+ALXUtil.h in Headers */,
 				C60CC61921D61F2000E32EDE /* UIViewController+ALXUtil.h in Headers */,
 				C60CC61121D6113F00E32EDE /* UIColor+ALXUtil.h in Headers */,
@@ -330,6 +337,7 @@
 				9C5482931B91B32C744A380E8E4C4D92 /* ALXUtil-dummy.m in Sources */,
 				C60CC60E21D6101300E32EDE /* NSAttributedString+ALXUtil.m in Sources */,
 				C60CC61221D6113F00E32EDE /* UIColor+ALXUtil.m in Sources */,
+				19D2EF9021D667DA00947192 /* NSCalendar+ALXUtil.m in Sources */,
 				C60CC61621D6122900E32EDE /* NSString+ALXUtil.m in Sources */,
 				C60CC60921D6100B00E32EDE /* UIView+ALXUtil.m in Sources */,
 				C60CC60621D60AAF00E32EDE /* UIImage+ALXUtil.m in Sources */,

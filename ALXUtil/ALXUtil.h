@@ -15,8 +15,14 @@
 #import "UIViewController+ALXUtil.h"
 
 #pragma mark - Device
-#define ALXSystemVersion    [UIDevice currentDevice].systemVersion
+#define ALXDevice_iPhone    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define ALXDevice_iPad      (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define ALXSystemVersion    [UIDevice currentDevice].systemVersion
+#define ALX_SYSTEM_VERSION_EQUAL_TO(v) ([[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define ALX_SYSTEM_VERSION_GREATER_THAN(v) ([[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define ALX_SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define ALX_SYSTEM_VERSION_LESS_THAN(v) ([[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define ALX_SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v) ([[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 
 #pragma mark - App
@@ -60,7 +66,7 @@
 
 #pragma mark - Notification
 #define ALXNotificationRegister(observer, selector, name, object)    [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(selector) name:(name) \ object:object]
-#define ALXNotificationPost(name, object)                      [[NSNotificationCenter defaultCenter] postNotificationName:(name) object:object];
+#define ALXNotificationPost(name, object)     [[NSNotificationCenter defaultCenter] postNotificationName:(name) object:object];
 #define ALXNotificationPostUserInfo(name, object, userInfo)    [[NSNotificationCenter defaultCenter] postNotificationName:(name) object:object userInfo:userInfo];
 
 
@@ -78,20 +84,18 @@
 #define ALXRadianToDegrees(radian) (radian * 180.0) / (M_PI)
 
 
+#pragma mark - Calendar
+#define  ALXYearFromDate(date) [[NSCalendar currentCalendar] component:NSCalendarUnitYear fromDate:date]
+#define  ALXMonthFromDate(date) [[NSCalendar currentCalendar] component:NSCalendarUnitMonth fromDate:date]
+#define  ALXDayFromDate(date)  [[NSCalendar currentCalendar] component:NSCalendarUnitDay fromDate:date]
+#define  ALXHourFromDate(date) [[NSCalendar currentCalendar] component:NSCalendarUnitHour fromDate:date]
+#define  ALXMinuteFromDate(date) [[NSCalendar currentCalendar] component:NSCalendarUnitMinute fromDate:date]
+#define  ALXSecondFromDate(date) [[NSCalendar currentCalendar] component:NSCalendarUnitSecond fromDate:date]
+#define  ALXWeekdayFromDate(date) [[NSCalendar currentCalendar] component:NSCalendarUnitWeekday fromDate:date]
+
+
 #pragma mark - Weak-Strong
-// 推荐使用（摘自YYKit）
-/**
- Synthsize a weak or strong reference.
- 
- Example:
- @weakify(self)
- [self doSomething^{
- @strongify(self)
- if (!self) return;
- ...
- }];
- 
- */
+/** @weakify(self) */
 #ifndef weakify
 #if DEBUG
 #if __has_feature(objc_arc)
@@ -107,7 +111,7 @@
 #endif
 #endif
 #endif
-
+/** @strongify(self) */
 #ifndef strongify
 #if DEBUG
 #if __has_feature(objc_arc)
@@ -126,11 +130,11 @@
 
 
 #pragma mark - Singleton
-/** .h声明 */
+/** .h    ALX_DEF_SINGLETON( __class ) */
 #undef    ALX_DEF_SINGLETON
 #define ALX_DEF_SINGLETON( __class ) \
 + (__class * __nonnull)sharedInstance;
-/** .m实现 */
+/** .m    ALX_IMP_SINGLETON( __class ) */
 #undef    ALX_IMP_SINGLETON
 #define ALX_IMP_SINGLETON( __class ) \
 + (__class * __nonnull)sharedInstance \
@@ -140,6 +144,11 @@ static __class * __singleton__; \
 dispatch_once(&once, ^{ __singleton__ = [[__class alloc] init]; } ); \
 return __singleton__; \
 }
+
+
+#pragma mark - Font
+#define ALXFont(f)        [UIFont systemFontOfSize:f]
+#define ALXBoldFont(f)    [UIFont boldSystemFontOfSize:f]
 
 
 #pragma mark - Color

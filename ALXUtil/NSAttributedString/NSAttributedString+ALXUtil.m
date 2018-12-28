@@ -6,6 +6,7 @@
 //
 
 #import "NSAttributedString+ALXUtil.h"
+#import "ALXUtil.h"
 
 @implementation NSAttributedString (ALXUtil)
 
@@ -17,6 +18,7 @@
     if (color) {
         [attStr addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, attStr.length)];
     }
+    
     return attStr;
 }
 
