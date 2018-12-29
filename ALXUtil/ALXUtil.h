@@ -153,17 +153,18 @@ return __singleton__; \
 
 #pragma mark - Color
 #define ALXRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
-#define ALXColorRGB(hex) \
+#define ALXColorHex(hex) \
 [UIColor colorWithRed:(((hex)>>16)&0xFF)/255.0 \
 green:(((hex)>>8)&0xFF)/255.0 \
 blue:((hex)&0xFF)/255.0 \
 alpha:1.0]
-#define ALXColorRGBA(hex, a) \
+#define ALXColorHexA(hex, a) \
 [UIColor colorWithRed:(((hex)>>16)&0xFF)/255.0 \
 green:(((hex)>>8)&0xFF)/255.0 \
 blue:((hex)&0xFF)/255.0 \
 alpha:(a)]
-#define ALXColorGray(f)   LGColorRGB(0x##f##f##f##f##f##f)
+#define ALXColorRGBA(r, g, b, a)    [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define ALXColorRGB(r, g, b)        ALXColorRGBA(r, g, b, 1.0)
 
 
 #pragma mark - Image

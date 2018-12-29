@@ -100,4 +100,47 @@
     return self.center.y;
 }
 
+- (void)alx_addCorners:(UIRectCorner)corners radius:(CGSize)size{
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:size];
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = self.bounds;
+    maskLayer.path = maskPath.CGPath;
+    self.layer.mask = maskLayer;
+}
+
+- (UIImage *)alx_snapshot{
+    return [self alx_snapshotWithScale:[UIScreen mainScreen].scale];
+}
+- (UIImage *)alx_snapshotWithScale:(CGFloat)scale{
+    return [self alx_snapshotWithScale:scale rect:self.bounds];
+}
+- (UIImage *)alx_snapshotWithScale:(CGFloat)scale rect:(CGRect)rect{
+    if (scale == 1) {
+        UIGraphicsBeginImageContext(rect.size);
+    } else {
+        UIGraphicsBeginImageContextWithOptions(rect.size, NO, scale);
+    }
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextConcatCTM(context, CGAffineTransformMakeTranslation(-rect.origin.x, -rect.origin.y));
+    
+    if (![self drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES]) {
+        [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    }
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+- (UIViewController *)alx_viewController{
+    id responder = self.nextResponder;
+    while (![responder isKindOfClass: [UIViewController class]] && ![responder isKindOfClass: [UIWindow class]]){
+        responder = [responder nextResponder];
+    }
+    if ([responder isKindOfClass: [UIViewController class]]){
+        return responder;
+    }
+    return nil;
+}
+
 @end
