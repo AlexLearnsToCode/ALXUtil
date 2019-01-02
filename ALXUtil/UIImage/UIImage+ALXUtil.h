@@ -19,11 +19,11 @@ typedef void(^UIImageSaveToPhotosAlbumBlock)(NSError *saveError);
 + (UIImage *)alx_fixImageOrientation:(UIImage *)image;
 
 - (BOOL)hasAlphaChannel;
-+ (UIImage*)alx_grayImageFromImage:(UIImage*)image
++ (UIImage*)alx_grayImageFromImage:(UIImage*)image;
 + (UIColor *)alx_colorInImage:(UIImage *)image point:(CGPoint)point;
 
 + (NSString *)alx_base64StringFromImage:(UIImage *)image;
-+ (UIImage *)alx_imageFromBase64String:(NSString *)base64String
++ (UIImage *)alx_imageFromBase64String:(NSString *)base64String;
 
 - (void)alx_saveToPhotosAlbumWithResult:(UIImageSaveToPhotosAlbumBlock)result;
 

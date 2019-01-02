@@ -66,8 +66,7 @@
 
 #pragma mark - Notification
 #define ALXNotificationRegister(observer, selector, name, object)    [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(selector) name:(name) \ object:object]
-#define ALXNotificationPost(name, object)     [[NSNotificationCenter defaultCenter] postNotificationName:(name) object:object];
-#define ALXNotificationPostUserInfo(name, object, userInfo)    [[NSNotificationCenter defaultCenter] postNotificationName:(name) object:object userInfo:userInfo];
+#define ALXNotificationPost(name, object, userInfo)    [[NSNotificationCenter defaultCenter] postNotificationName:(name) object:object userInfo:userInfo];
 
 
 #pragma mark - Value
@@ -147,8 +146,8 @@ return __singleton__; \
 
 
 #pragma mark - Font
-#define ALXFont(f)        [UIFont systemFontOfSize:f]
-#define ALXBoldFont(f)    [UIFont boldSystemFontOfSize:f]
+#define ALXSystemFont(f)        [UIFont systemFontOfSize:f]
+#define ALXBoldSystemFont(f)    [UIFont boldSystemFontOfSize:f]
 
 
 #pragma mark - Color
