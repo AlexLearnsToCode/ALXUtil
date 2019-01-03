@@ -66,6 +66,7 @@ typedef NS_ENUM(NSInteger, ALXPKCSPadding) {
 - (NSString *)alx_base64EncodedString;
 - (NSString *)alx_base64DecodedString;
 
+// !!!:Alexgao--- 加密解密不适合做成工具方法,还是做成一个工具类比较好
 #pragma mark - Encrypt && Decrypt
 #pragma mark - *** Hash/Hmac ***
 - (NSString *)alx_hashStringWithAlgorithm:(ALXHashAlgorithm)algorithm;
@@ -73,15 +74,20 @@ typedef NS_ENUM(NSInteger, ALXPKCSPadding) {
 
 #pragma mark - *** Symmetric Encryption(public key = private key) ***
 /* ECB(Block Ciphers Mode) */
-- (NSData *)alx_ECBEncryptWithAlgorithm:(CCAlgorithm)algorithm key:(NSString *)key padding:(ALXPKCSPadding)padding;
+- (NSString *)alx_ECBEncryptWithAlgorithm:(CCAlgorithm)algorithm key:(NSString *)key padding:(ALXPKCSPadding)padding;
 - (NSString *)alx_ECBDecryptWithAlgorithm:(CCAlgorithm)algorithm key:(NSString *)key padding:(ALXPKCSPadding)padding;
 
 /* CBC(Block Ciphers Mode) */
-- (NSData *)alx_CBCEncryptWithAlgorithm:(CCAlgorithm)algorithm key:(NSString *)key padding:(ALXPKCSPadding)padding iv:(NSString *)iv;
+- (NSString *)alx_CBCEncryptWithAlgorithm:(CCAlgorithm)algorithm key:(NSString *)key padding:(ALXPKCSPadding)padding iv:(NSString *)iv;
 - (NSString *)alx_CBCDecryptWithAlgorithm:(CCAlgorithm)algorithm key:(NSString *)key padding:(ALXPKCSPadding)padding iv:(NSString *)iv;
 
 #pragma mark - *** Asymmetric Encryption(public key, private key) ***
 #pragma mark - *** *** RSA *** ***
+- (NSString *)alx_RSAEntryptWithPublicKey:(NSString *)publicKey;
+- (NSString *)alx_RSAEntryptWithContentsOfPublicKey:(NSString *)publicKeyFilePath;
+
+- (NSString *)alx_RSADecryptWithPrivateKey:(NSString *)privateKey;
+- (NSString *)alx_RSADecryptWithContentsOfPrivateKey:(NSString *)privateKeyFilePath password:(NSString *)password;
 
 @end
 

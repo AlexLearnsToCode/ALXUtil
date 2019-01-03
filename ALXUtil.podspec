@@ -50,6 +50,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
+  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics', 'Security'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
